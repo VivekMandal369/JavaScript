@@ -17,7 +17,7 @@ var i = 1;
 }
 console.log(i) // Output: 2
 
-/////////////////////////////
+// Examples
 
 let j = 3;
 // Created a scope using {}
@@ -26,8 +26,4 @@ let j = 3;
   console.log(j); // Output: 4
 }
 console.log(j) // Output: 3
-
-
-
-
 
