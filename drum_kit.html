@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta id="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Drum Kit</title>
+  <style>
+    #main {
+      display: flex;
+    }
+    .key {
+      padding: 10px;
+      margin: 10px;
+      background: blueviolet;
+      font-size: 18px;
+    }
+    /* kbd {
+      padding: 15px;
+    } */
+  </style>
+</head>
+<body>
+  <div id="main">
+    <div id="1" class="key">
+      <kbd>A</kbd>
+    </div>
+    <div id="2" class="key">
+      <kbd>B</kbd>
+    </div>
+    <div id="3" class="key">
+      <kbd>C</kbd>
+    </div>
+    <div id="4" class="key">
+      <kbd>D</kbd>
+    </div>
+    <div id="5" class="key">
+      <kbd>E</kbd>
+    </div>
+    <div id="6" class="key">
+      <kbd>F</kbd>
+    </div>
+    <div id="7" class="key">
+      <kbd>G</kbd>
+    </div>
+    <div id="8" class="key">
+      <kbd>H</kbd>
+    </div>
+    <div id="9" class="key">
+      <kbd>I</kbd>
+    </div>
+    <div id="10" class="key">
+      <kbd>J</kbd>
+    </div>
+    <div id="11" class="key">
+      <kbd>K</kbd>
+    </div>
+  </div>
+
+  <audio id="a_1" src="sound/FQXH9GU-boom-drum.mp3"></audio>
+  <audio id="a_2" src="sound/MFSNWBT-drums-accent.mp3"></audio>
+  <audio id="a_3" src="sound/mixkit-bad-joke-drums-2893.wav"></audio>
+  <audio id="a_4" src="sound/mixkit-blockbuster-trailer-bass-drum-553.wav"></audio>
+  <audio id="a_5" src="sound/mixkit-deep-dark-horror-drum-557.wav"></audio>
+  <audio id="a_6" src="sound/mixkit-deep-horror-drum-556.wav"></audio>
+  <audio id="a_7" src="sound/mixkit-drum-and-percussion-545.wav"></audio>
+  <audio id="a_8" src="sound/mixkit-drum-bass-hit-2294.wav"></audio>
+  <audio id="a_9" src="sound/mixkit-losing-drums-2023.wav"></audio>
+  <audio id="a_10" src="sound/mixkit-metal-hit-drum-sound-550.wav"></audio>
+  <audio id="a_11" src="sound/mixkit-tribal-dry-drum-558.wav"></audio>
+
+  <script>
+    window.addEventListener('click', function (e) {
+      // console.log(e.target.id);
+      const audio = document.querySelector(`audio[id="a_${e.target.id}"]`);
+      if(!audio) return;
+      audio.play();
+    });
+  </script>
+</body>
+</html>
